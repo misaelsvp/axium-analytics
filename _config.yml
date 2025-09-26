@@ -1,8 +1,8 @@
 # Site settings
 title: Axium Analytics
 description: "Transformando dados em insights estratégicos para pequenas e médias empresas"
-baseurl: ""
-url: "https://axium-analytics.github.io"
+baseurl: "/axium-analytics"
+url: "https://misaelsvp.github.io"
 
 # Build settings
 markdown: kramdown
