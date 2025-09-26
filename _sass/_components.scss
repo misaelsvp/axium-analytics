@@ -1,0 +1,276 @@
+// Componentes específicos
+
+// Hero Section
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: $primary-gradient;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="300" r="200" fill="url(%23a)"/><circle cx="400" cy="700" r="250" fill="url(%23a)"/></svg>');
+    opacity: 0.3;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: $white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 $spacing-6;
+  }
+  
+  .hero-title {
+    font-size: $font-size-5xl;
+    font-weight: 700;
+    margin-bottom: $spacing-6;
+    line-height: 1.1;
+    
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-4xl;
+    }
+  }
+  
+  .hero-subtitle {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-8;
+    opacity: 0.9;
+    font-weight: 300;
+    
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-size-lg;
+    }
+  }
+  
+  .hero-cta {
+    display: flex;
+    gap: $spacing-4;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    .btn {
+      min-width: 160px;
+    }
+  }
+}
+
+// Services Grid
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-8;
+  margin: $spacing-16 0;
+}
+
+.service-card {
+  background: $white;
+  border-radius: $border-radius-2xl;
+  padding: $spacing-8;
+  text-align: center;
+  box-shadow: $shadow;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: $primary-gradient;
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-xl;
+  }
+  
+  .service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto $spacing-6;
+    background: $primary-gradient;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-3xl;
+    color: $white;
+  }
+  
+  .service-title {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    margin-bottom: $spacing-4;
+    color: $gray-900;
+  }
+  
+  .service-description {
+    color: $gray-600;
+    line-height: 1.6;
+  }
+}
+
+// Stats Section
+.stats-section {
+  background: $gray-50;
+  padding: $spacing-20 0;
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $spacing-8;
+    text-align: center;
+  }
+  
+  .stat-item {
+    .stat-number {
+      font-size: $font-size-4xl;
+      font-weight: 700;
+      background: $primary-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: $spacing-2;
+    }
+    
+    .stat-label {
+      font-size: $font-size-lg;
+      color: $gray-600;
+      font-weight: 500;
+    }
+  }
+}
+
+// Testimonials
+.testimonials {
+  padding: $spacing-20 0;
+  background: $white;
+  
+  .testimonial-card {
+    background: $gray-50;
+    border-radius: $border-radius-2xl;
+    padding: $spacing-8;
+    text-align: center;
+    position: relative;
+    
+    &::before {
+      content: '"';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 4rem;
+      color: $primary-color;
+      font-weight: 700;
+    }
+    
+    .testimonial-text {
+      font-size: $font-size-lg;
+      font-style: italic;
+      color: $gray-700;
+      margin-bottom: $spacing-6;
+      line-height: 1.6;
+    }
+    
+    .testimonial-author {
+      font-weight: 600;
+      color: $gray-900;
+    }
+  }
+}
+
+// CTA Section
+.cta-section {
+  background: $primary-gradient;
+  padding: $spacing-20 0;
+  text-align: center;
+  color: $white;
+  
+  .cta-title {
+    font-size: $font-size-3xl;
+    font-weight: 700;
+    margin-bottom: $spacing-4;
+  }
+  
+  .cta-subtitle {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-8;
+    opacity: 0.9;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: $spacing-4;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+// Formulários
+.form-group {
+  margin-bottom: $spacing-6;
+  
+  label {
+    display: block;
+    margin-bottom: $spacing-2;
+    font-weight: 500;
+    color: $gray-700;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: $spacing-3 $spacing-4;
+    border: 2px solid $gray-200;
+    border-radius: $border-radius;
+    font-size: $font-size-base;
+    transition: border-color 0.3s ease;
+    
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+// Loading states
+.loading {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid $gray-300;
+    border-top: 2px solid $primary-color;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

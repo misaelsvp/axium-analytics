@@ -1,0 +1,63 @@
+# Site settings
+title: Axium Analytics
+description: "Transformando dados em insights estratégicos para pequenas e médias empresas"
+baseurl: ""
+url: "https://axium-analytics.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Social links
+social:
+  - name: LinkedIn
+    icon: linkedin
+    url: "https://linkedin.com/in/misaels"
+  - name: GitHub
+    icon: github
+    url: "https://github.com/misaels"
+
+# Navigation
+navigation:
+  - title: Início
+    url: /
+  - title: Serviços
+    url: /services/
+  - title: Sobre
+    url: /about/
+  - title: Contato
+    url: /contact/
