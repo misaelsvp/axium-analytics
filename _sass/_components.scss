@@ -232,74 +232,7 @@
   }
 }
 
-// Stats Section
-.stats-section {
-  background: $gray-50;
-  padding: $spacing-20 0;
-  
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: $spacing-8;
-    text-align: center;
-  }
-  
-  .stat-item {
-    .stat-number {
-      font-size: $font-size-4xl;
-      font-weight: 700;
-      background: $primary-gradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: $spacing-2;
-    }
-    
-    .stat-label {
-      font-size: $font-size-lg;
-      color: $gray-600;
-      font-weight: 500;
-    }
-  }
-}
 
-// Testimonials
-.testimonials {
-  padding: $spacing-20 0;
-  background: $white;
-  
-  .testimonial-card {
-    background: $gray-50;
-    border-radius: $border-radius-2xl;
-    padding: $spacing-8;
-    text-align: center;
-    position: relative;
-    
-    &::before {
-      content: '"';
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 4rem;
-      color: $primary-color;
-      font-weight: 700;
-    }
-    
-    .testimonial-text {
-      font-size: $font-size-lg;
-      font-style: italic;
-      color: $gray-700;
-      margin-bottom: $spacing-6;
-      line-height: 1.6;
-    }
-    
-    .testimonial-author {
-      font-weight: 600;
-      color: $gray-900;
-    }
-  }
-}
 
 // CTA Section
 .cta-section {

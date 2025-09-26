@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.service-card, .stat-item, .testimonial-card');
+    const animatedElements = document.querySelectorAll('.service-card');
     animatedElements.forEach(el => {
         observer.observe(el);
     });
@@ -145,41 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
     
-    // Counter animation for stats
-    function animateCounters() {
-        const counters = document.querySelectorAll('.stat-number[data-count]');
-        
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-count'));
-            const duration = 2000; // 2 seconds
-            const increment = target / (duration / 16); // 60fps
-            let current = 0;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                counter.textContent = Math.floor(current) + (counter.textContent.includes('%') ? '%' : '+');
-            }, 16);
-        });
-    }
-    
-    // Trigger counter animation when stats section is visible
-    const statsSection = document.querySelector('.stats-section');
-    if (statsSection) {
-        const statsObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        statsObserver.observe(statsSection);
-    }
     
     // Parallax effect for hero section
     const hero = document.querySelector('.hero');
