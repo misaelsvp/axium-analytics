@@ -16,8 +16,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="300" r="200" fill="url(%23a)"/><circle cx="400" cy="700" r="250" fill="url(%23a)"/></svg>');
-    opacity: 0.3;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,0.15)"/><stop offset="100%" stop-color="transparent"/></radialGradient><linearGradient id="b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="300" r="200" fill="url(%23a)"/><circle cx="400" cy="700" r="250" fill="url(%23a)"/><rect x="0" y="0" width="100%" height="100%" fill="url(%23b)"/></svg>');
+    opacity: 0.4;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(30, 64, 175, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+    pointer-events: none;
   }
   
   .hero-content {
@@ -32,20 +43,30 @@
   
   .hero-title {
     font-size: $font-size-5xl;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: $spacing-6;
     line-height: 1.1;
+    letter-spacing: -2px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
     
     @media (max-width: $breakpoint-md) {
       font-size: $font-size-4xl;
+      letter-spacing: -1px;
+    }
+    
+    @media (max-width: $breakpoint-sm) {
+      font-size: $font-size-3xl;
     }
   }
   
   .hero-subtitle {
     font-size: $font-size-xl;
     margin-bottom: $spacing-8;
-    opacity: 0.9;
-    font-weight: 300;
+    opacity: 0.95;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     
     @media (max-width: $breakpoint-md) {
       font-size: $font-size-lg;
@@ -54,12 +75,51 @@
   
   .hero-cta {
     display: flex;
-    gap: $spacing-4;
+    gap: $spacing-6;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: $spacing-8;
     
     .btn {
-      min-width: 160px;
+      min-width: 180px;
+      padding: $spacing-4 $spacing-8;
+      font-size: $font-size-lg;
+      font-weight: 600;
+      border-radius: $border-radius-xl;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      
+      &.btn-primary {
+        background: rgba(255, 255, 255, 0.95);
+        color: $primary-color;
+        border-color: rgba(255, 255, 255, 0.3);
+        
+        &:hover {
+          background: $white;
+          color: $primary-color;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+      }
+      
+      &.btn-outline {
+        background: transparent;
+        color: $white;
+        border-color: rgba(255, 255, 255, 0.8);
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+          border-color: $white;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+      }
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      }
     }
   }
 }
@@ -78,9 +138,10 @@
   padding: $spacing-8;
   text-align: center;
   box-shadow: $shadow;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(30, 64, 175, 0.1);
   
   &::before {
     content: '';
@@ -90,24 +151,72 @@
     right: 0;
     height: 4px;
     background: $primary-gradient;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.02) 0%, rgba(59, 130, 246, 0.01) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
   
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: $shadow-xl;
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(30, 64, 175, 0.15);
+    border-color: rgba(30, 64, 175, 0.2);
+    
+    &::before {
+      transform: scaleX(1);
+    }
+    
+    &::after {
+      opacity: 1;
+    }
   }
   
   .service-icon {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin: 0 auto $spacing-6;
     background: $primary-gradient;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: $font-size-3xl;
+    font-size: $font-size-4xl;
     color: $white;
+    box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(255,255,255,0.2) 0%, transparent 50%, rgba(255,255,255,0.2) 100%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    
+    &:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 12px 30px rgba(30, 64, 175, 0.4);
+      
+      &::before {
+        transform: translateX(100%);
+      }
+    }
   }
   
   .service-title {

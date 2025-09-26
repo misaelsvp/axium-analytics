@@ -147,10 +147,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Counter animation for stats
     function animateCounters() {
-        const counters = document.querySelectorAll('.stat-number');
+        const counters = document.querySelectorAll('.stat-number[data-count]');
         
         counters.forEach(counter => {
-            const target = parseInt(counter.textContent.replace(/\D/g, ''));
+            const target = parseInt(counter.getAttribute('data-count'));
             const duration = 2000; // 2 seconds
             const increment = target / (duration / 16); // 60fps
             let current = 0;
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     current = target;
                     clearInterval(timer);
                 }
-                counter.textContent = Math.floor(current).toLocaleString();
+                counter.textContent = Math.floor(current) + (counter.textContent.includes('%') ? '%' : '+');
             }, 16);
         });
     }
