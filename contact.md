@@ -156,7 +156,6 @@ permalink: /contact/
       Não perca tempo - entre em contato agora e dê o primeiro passo para transformar seus dados
     </p>
     <div class="cta-buttons">
-      <a href="mailto:contato@axiumanalytics.com" class="btn btn-secondary">Enviar E-mail</a>
       <a href="https://www.linkedin.com/company/axium-analytics" target="_blank" class="btn" style="background: white; color: #667eea; border: 2px solid white;">Conectar no LinkedIn</a>
     </div>
   </div>
