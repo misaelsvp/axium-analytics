@@ -28,23 +28,23 @@ permalink: /contact/
         
         <form action="mailto:contato@axiumanalytics.com" method="post" enctype="text/plain">
           <div class="form-group">
-            <label for="name">Nome Completo *</label>
-            <input type="text" id="name" name="name" required>
+            <label for="name" style="color: #1e293b; font-weight: 600; margin-bottom: 0.5rem; display: block;">Nome Completo *</label>
+            <input type="text" id="name" name="name" required style="color: #1e293b; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; font-size: 1rem; width: 100%; transition: border-color 0.3s ease;">
           </div>
           
           <div class="form-group">
-            <label for="email">E-mail *</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email" style="color: #1e293b; font-weight: 600; margin-bottom: 0.5rem; display: block;">E-mail *</label>
+            <input type="email" id="email" name="email" required style="color: #1e293b; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; font-size: 1rem; width: 100%; transition: border-color 0.3s ease;">
           </div>
           
           <div class="form-group">
-            <label for="company">Empresa</label>
-            <input type="text" id="company" name="company">
+            <label for="company" style="color: #1e293b; font-weight: 600; margin-bottom: 0.5rem; display: block;">Empresa</label>
+            <input type="text" id="company" name="company" style="color: #1e293b; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; font-size: 1rem; width: 100%; transition: border-color 0.3s ease;">
           </div>
           
           <div class="form-group">
-            <label for="phone">Telefone</label>
-            <input type="tel" id="phone" name="phone">
+            <label for="phone" style="color: #1e293b; font-weight: 600; margin-bottom: 0.5rem; display: block;">Telefone</label>
+            <input type="tel" id="phone" name="phone" style="color: #1e293b; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; font-size: 1rem; width: 100%; transition: border-color 0.3s ease;">
           </div>
           
           <div class="form-group">
@@ -116,8 +116,8 @@ permalink: /contact/
               🚀
             </div>
             <div>
-              <h4 style="margin-bottom: 0.25rem;">Tempo de Resposta</h4>
-              <p style="margin: 0; color: #64748b;">Até 24 horas</p>
+              <h4 style="margin-bottom: 0.25rem; color: #1e293b; font-weight: 600;">Tempo de Resposta</h4>
+              <p style="margin: 0; color: #475569; font-weight: 500;">Até 24 horas</p>
             </div>
           </div>
         </div>
@@ -151,8 +151,8 @@ permalink: /contact/
 <!-- CTA Section -->
 <section class="cta-section">
   <div class="container">
-    <h2 class="cta-title">Pronto para começar seu projeto?</h2>
-    <p class="cta-subtitle">
+    <h2 class="cta-title" style="color: #ffffff; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Pronto para começar seu projeto?</h2>
+    <p class="cta-subtitle" style="color: #f1f5f9; font-weight: 500; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
       Não perca tempo - entre em contato agora e dê o primeiro passo para transformar seus dados
     </p>
     <div class="cta-buttons">
