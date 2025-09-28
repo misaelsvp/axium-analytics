@@ -84,8 +84,8 @@ permalink: /contact/
               📧
             </div>
             <div>
-              <h4 style="margin-bottom: 0.25rem;">E-mail</h4>
-              <p style="margin: 0; color: #64748b;">contato@axiumanalytics.com</p>
+              <h4 style="margin-bottom: 0.25rem; color: #ffffff; font-weight: 600;">E-mail</h4>
+              <p style="margin: 0; color: #f1f5f9; font-weight: 500;">contato@axiumanalytics.com</p>
             </div>
           </div>
           
@@ -94,9 +94,9 @@ permalink: /contact/
               💼
             </div>
             <div>
-              <h4 style="margin-bottom: 0.25rem;">LinkedIn</h4>
-              <p style="margin: 0; color: #64748b;">
-                <a href="https://www.linkedin.com/company/axium-analytics" target="_blank" style="color: #667eea;">linkedin.com/company/axium-analytics</a>
+              <h4 style="margin-bottom: 0.25rem; color: #ffffff; font-weight: 600;">LinkedIn</h4>
+              <p style="margin: 0; color: #f1f5f9;">
+                <a href="https://www.linkedin.com/company/axium-analytics" target="_blank" style="color: #93c5fd; font-weight: 500;">linkedin.com/company/axium-analytics</a>
               </p>
             </div>
           </div>
@@ -116,8 +116,8 @@ permalink: /contact/
               🚀
             </div>
             <div>
-              <h4 style="margin-bottom: 0.25rem; color: #1e293b; font-weight: 600;">Tempo de Resposta</h4>
-              <p style="margin: 0; color: #475569; font-weight: 500;">Até 24 horas</p>
+              <h4 style="margin-bottom: 0.25rem; color: #ffffff; font-weight: 600;">Tempo de Resposta</h4>
+              <p style="margin: 0; color: #f1f5f9; font-weight: 500;">Até 24 horas</p>
             </div>
           </div>
         </div>
