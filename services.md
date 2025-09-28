@@ -154,7 +154,7 @@ permalink: /services/
 <section class="cta-section">
   <div class="container">
     <h2 class="cta-title">Pronto para começar?</h2>
-    <p class="cta-subtitle">
+    <p class="cta-subtitle" style="color: #ffffff; font-weight: 500; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
       Entre em contato conosco para uma consulta gratuita e descubra como podemos ajudar sua empresa
     </p>
     <div class="cta-buttons">
