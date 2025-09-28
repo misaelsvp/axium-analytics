@@ -28,27 +28,27 @@ permalink: /contact/
         
         <form action="mailto:contato@axiumanalytics.com" method="post" enctype="text/plain">
           <div class="form-group">
-            <label for="name" style="color: #1e293b; font-weight: 600; margin-bottom: 0.5rem; display: block;">Nome Completo *</label>
+            <label for="name" style="color: #ffffff; font-weight: 600; margin-bottom: 0.5rem; display: block;">Nome Completo *</label>
             <input type="text" id="name" name="name" required style="color: #1e293b; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; font-size: 1rem; width: 100%; transition: border-color 0.3s ease;">
           </div>
           
           <div class="form-group">
-            <label for="email" style="color: #1e293b; font-weight: 600; margin-bottom: 0.5rem; display: block;">E-mail *</label>
+            <label for="email" style="color: #ffffff; font-weight: 600; margin-bottom: 0.5rem; display: block;">E-mail *</label>
             <input type="email" id="email" name="email" required style="color: #1e293b; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; font-size: 1rem; width: 100%; transition: border-color 0.3s ease;">
           </div>
           
           <div class="form-group">
-            <label for="company" style="color: #1e293b; font-weight: 600; margin-bottom: 0.5rem; display: block;">Empresa</label>
+            <label for="company" style="color: #ffffff; font-weight: 600; margin-bottom: 0.5rem; display: block;">Empresa</label>
             <input type="text" id="company" name="company" style="color: #1e293b; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; font-size: 1rem; width: 100%; transition: border-color 0.3s ease;">
           </div>
           
           <div class="form-group">
-            <label for="phone" style="color: #1e293b; font-weight: 600; margin-bottom: 0.5rem; display: block;">Telefone</label>
+            <label for="phone" style="color: #ffffff; font-weight: 600; margin-bottom: 0.5rem; display: block;">Telefone</label>
             <input type="tel" id="phone" name="phone" style="color: #1e293b; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; font-size: 1rem; width: 100%; transition: border-color 0.3s ease;">
           </div>
           
           <div class="form-group">
-            <label for="service">Serviço de Interesse</label>
+            <label for="service" style="color: #ffffff; font-weight: 600; margin-bottom: 0.5rem; display: block;">Serviço de Interesse</label>
             <select id="service" name="service">
               <option value="">Selecione um serviço</option>
               <option value="analise-dados">Análise de Dados</option>
@@ -61,7 +61,7 @@ permalink: /contact/
           </div>
           
           <div class="form-group">
-            <label for="message">Mensagem *</label>
+            <label for="message" style="color: #ffffff; font-weight: 600; margin-bottom: 0.5rem; display: block;">Mensagem *</label>
             <textarea id="message" name="message" rows="5" required placeholder="Conte-nos sobre seu projeto e como podemos ajudar..."></textarea>
           </div>
           
