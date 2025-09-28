@@ -12,6 +12,9 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
+# GitHub Pages settings
+github: [metadata]
+
 # Collections
 collections:
   services:
