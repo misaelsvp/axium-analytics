@@ -269,6 +269,7 @@
     padding: 0 $spacing-6;
     text-align: center;
     color: $white;
+    animation: fadeInUp 1.2s ease-out;
     
     .hero-title {
       font-size: $font-size-5xl;
@@ -276,6 +277,7 @@
       line-height: 1.1;
       margin-bottom: $spacing-6;
       text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      animation: fadeInUp 1.5s ease-out 0.3s both;
       
       @media (max-width: $breakpoint-md) {
         font-size: $font-size-4xl;
@@ -287,6 +289,7 @@
       line-height: 1.6;
       margin-bottom: $spacing-8;
       opacity: 0.95;
+      animation: fadeInUp 1.8s ease-out 0.6s both;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
@@ -301,6 +304,7 @@
       gap: $spacing-4;
       justify-content: center;
       flex-wrap: wrap;
+      animation: fadeInUp 2.1s ease-out 0.9s both;
       
       @media (max-width: $breakpoint-md) {
         flex-direction: column;
