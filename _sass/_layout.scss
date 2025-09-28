@@ -237,6 +237,10 @@
   display: flex;
   align-items: center;
   background: $geometric-gradient;
+  background-image: url('/assets/images/bg_axium_analytics.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
   
   &::before {
@@ -246,7 +250,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.05) 100%);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 58, 138, 0.6) 50%, rgba(30, 58, 138, 0.7) 100%);
   }
   
   .hero-content {
