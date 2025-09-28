@@ -106,8 +106,8 @@ permalink: /contact/
               ⏰
             </div>
             <div>
-              <h4 style="margin-bottom: 0.25rem;">Horário de Atendimento</h4>
-              <p style="margin: 0; color: #64748b;">Segunda a Sexta, 9h às 18h</p>
+              <h4 style="margin-bottom: 0.25rem; color: #ffffff; font-weight: 600;">Horário de Atendimento</h4>
+              <p style="margin: 0; color: #f1f5f9; font-weight: 500;">Segunda a Sexta, 9h às 18h</p>
             </div>
           </div>
           
