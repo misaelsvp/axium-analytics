@@ -1,15 +1,18 @@
 // Axium Analytics - Design System
 // Paleta de cores baseada na identidade visual da Axium
 
-// Cores primárias - Baseadas no logo Axium (azuis)
-$primary-gradient: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
-$secondary-gradient: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #7dd3fc 100%);
-$accent-gradient: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%);
+// Cores primárias - Baseadas no logo Axium (azuis com gradiente)
+$primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #1e40af 25%, #3b82f6 50%, #60a5fa 75%, #93c5fd 100%);
+$secondary-gradient: linear-gradient(135deg, #0f172a 0%, #1e3a8a 30%, #3b82f6 60%, #60a5fa 100%);
+$accent-gradient: linear-gradient(135deg, #1d4ed8 0%, #2563eb 30%, #3b82f6 60%, #60a5fa 100%);
+$geometric-gradient: linear-gradient(135deg, #1e3a8a 0%, #1e40af 20%, #3b82f6 40%, #60a5fa 60%, #93c5fd 80%, #dbeafe 100%);
 
 // Cores sólidas baseadas no logo Axium
-$primary-color: #1e40af;        // Azul escuro principal
-$secondary-color: #3b82f6;      // Azul médio
-$accent-color: #60a5fa;         // Azul claro
+$primary-color: #1e3a8a;        // Azul escuro principal (navy)
+$secondary-color: #1e40af;      // Azul médio escuro
+$accent-color: #3b82f6;         // Azul médio
+$light-accent: #60a5fa;         // Azul claro
+$lightest-blue: #93c5fd;        // Azul mais claro
 $success-color: #10b981;        // Verde para sucesso
 $warning-color: #f59e0b;        // Laranja para avisos
 $error-color: #ef4444;          // Vermelho para erros
@@ -73,3 +76,14 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
 $breakpoint-2xl: 1536px;
+
+// Elementos geométricos do logo
+$geometric-pattern: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="geometric" width="20" height="20" patternUnits="userSpaceOnUse"><polygon points="10,2 18,8 18,16 10,22 2,16 2,8" fill="rgba(30,58,138,0.1)"/><polygon points="10,8 14,12 10,16 6,12" fill="rgba(59,130,246,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23geometric)"/></svg>');
+
+// Sombras específicas para elementos geométricos
+$geometric-shadow: 0 8px 32px rgba(30, 58, 138, 0.15);
+$geometric-shadow-lg: 0 16px 48px rgba(30, 58, 138, 0.25);
+
+// Bordas arredondadas para elementos do logo
+$logo-border-radius: 12px;
+$geometric-border-radius: 16px;

@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -96,7 +97,7 @@ img {
   border: none;
   border-radius: $border-radius;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
   
@@ -116,24 +117,26 @@ img {
   }
   
   &.btn-primary {
-    background: $primary-gradient;
+    background: $geometric-gradient;
     color: $white;
-    box-shadow: $shadow-md;
+    box-shadow: $geometric-shadow;
+    border-radius: $geometric-border-radius;
     
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: $shadow-lg;
+      transform: translateY(-3px);
+      box-shadow: $geometric-shadow-lg;
     }
   }
   
   &.btn-secondary {
     background: $secondary-gradient;
     color: $white;
-    box-shadow: $shadow-md;
+    box-shadow: $geometric-shadow;
+    border-radius: $geometric-border-radius;
     
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: $shadow-lg;
+      transform: translateY(-3px);
+      box-shadow: $geometric-shadow-lg;
     }
   }
   
@@ -152,20 +155,32 @@ img {
 // Cards
 .card {
   background: $white;
-  border-radius: $border-radius-xl;
-  box-shadow: $shadow;
+  border-radius: $geometric-border-radius;
+  box-shadow: $geometric-shadow;
   padding: $spacing-8;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: $geometric-gradient;
+  }
   
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: $shadow-lg;
+    transform: translateY(-6px);
+    box-shadow: $geometric-shadow-lg;
   }
 }
 
 // Gradientes de fundo
 .gradient-bg {
-  background: $primary-gradient;
+  background: $geometric-gradient;
   position: relative;
   
   &::before {
@@ -175,16 +190,120 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.1;
+    background: $geometric-pattern;
+    opacity: 0.05;
   }
+}
+
+// Elementos geométricos decorativos - hexágonos suaves
+.geometric-shape {
+  position: absolute;
+  background: $geometric-gradient;
+  opacity: 0.08;
+  animation: floatHexagon 8s ease-in-out infinite;
+  
+  &.shape-1 {
+    width: 80px;
+    height: 46px;
+    top: 15%;
+    left: 8%;
+    animation-delay: 0s;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }
+  
+  &.shape-2 {
+    width: 60px;
+    height: 35px;
+    top: 55%;
+    right: 12%;
+    animation-delay: 3s;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }
+  
+  &.shape-3 {
+    width: 70px;
+    height: 40px;
+    bottom: 25%;
+    left: 15%;
+    animation-delay: 6s;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }
+}
+
+// Padrões geométricos de fundo
+.geometric-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(30, 58, 138, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 40%, rgba(96, 165, 250, 0.05) 50%, transparent 60%);
+  background-size: 200px 200px, 150px 150px, 100px 100px;
+  animation: patternMove 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes patternMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+// Elementos decorativos hexagonais
+.hexagon {
+  position: relative;
+  width: 60px;
+  height: 34.64px;
+  background: $geometric-gradient;
+  margin: 17.32px 0;
+  opacity: 0.1;
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+  }
+  
+  &::before {
+    bottom: 100%;
+    border-bottom: 17.32px solid;
+    border-bottom-color: inherit;
+  }
+  
+  &::after {
+    top: 100%;
+    border-top: 17.32px solid;
+    border-top-color: inherit;
+  }
+}
+
+// Formas triangulares decorativas
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 43px solid;
+  border-bottom-color: $primary-color;
+  opacity: 0.1;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 // Animações
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -195,7 +314,7 @@ img {
 @keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
@@ -206,7 +325,7 @@ img {
 @keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(20px);
   }
   to {
     opacity: 1;
@@ -215,15 +334,15 @@ img {
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-fade-in-left {
-  animation: fadeInLeft 0.6s ease-out;
+  animation: fadeInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-fade-in-right {
-  animation: fadeInRight 0.6s ease-out;
+  animation: fadeInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @keyframes shimmer {
@@ -232,22 +351,21 @@ img {
   100% { transform: translateX(100%); }
 }
 
-@keyframes pulse {
-  0% { 
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.7;
+@keyframes floatHexagon {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.08;
+  }
+  25% { 
+    transform: translateY(-8px) rotate(2deg);
+    opacity: 0.12;
   }
   50% { 
-    transform: translate(-50%, -50%) scale(1.05);
-    opacity: 0.3;
+    transform: translateY(-12px) rotate(0deg);
+    opacity: 0.15;
   }
-  100% { 
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0;
+  75% { 
+    transform: translateY(-6px) rotate(-1deg);
+    opacity: 0.10;
   }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
 }

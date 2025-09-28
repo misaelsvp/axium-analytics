@@ -9,18 +9,19 @@ permalink: /services/
     <div class="text-center mb-8">
       <h1>Nossos Serviços</h1>
       <p style="font-size: 1.25rem; color: #64748b; max-width: 600px; margin: 0 auto;">
-        Soluções completas de análise de dados para impulsionar o crescimento da sua empresa
+        Soluções estratégicas de analytics e business intelligence para acelerar 
+        a transformação digital e impulsionar resultados organizacionais
       </p>
     </div>
     
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">📊</div>
-        <h3 class="service-title">Análise de Dados</h3>
+        <h3 class="service-title">Analytics Estratégico</h3>
         <p class="service-description">
-          Realizamos diagnósticos completos dos seus dados, identificando padrões, 
-          tendências e oportunidades de melhoria. Nossa abordagem combina técnicas 
-          estatísticas avançadas com conhecimento prático de negócios.
+          Desenvolvemos análises profundas que revelam oportunidades de crescimento 
+          e otimização. Aplicamos metodologias estatísticas avançadas e frameworks 
+          comprovados para extrair insights estratégicos dos seus dados.
         </p>
         <ul style="text-align: left; margin-top: 1.5rem;">
           <li>Análise exploratória de dados</li>
@@ -32,11 +33,11 @@ permalink: /services/
       
       <div class="service-card">
         <div class="service-icon">📈</div>
-        <h3 class="service-title">Dashboards Inteligentes</h3>
+        <h3 class="service-title">Business Intelligence</h3>
         <p class="service-description">
-          Criamos dashboards interativos e personalizados que facilitam a visualização 
-          de métricas importantes. Interfaces intuitivas que permitem tomada de decisão 
-          rápida e eficaz.
+          Implementamos soluções de BI que transformam dados complexos em 
+          visualizações estratégicas e acionáveis, facilitando a tomada de decisões 
+          baseadas em evidências.
         </p>
         <ul style="text-align: left; margin-top: 1.5rem;">
           <li>Dashboards em tempo real</li>
@@ -48,10 +49,11 @@ permalink: /services/
       
       <div class="service-card">
         <div class="service-icon">⚡</div>
-        <h3 class="service-title">Automação de Processos</h3>
+        <h3 class="service-title">Otimização Operacional</h3>
         <p class="service-description">
-          Implementamos soluções de automação que otimizam operações e reduzem 
-          o trabalho manual repetitivo. Foco em eficiência e redução de erros.
+          Desenvolvemos soluções de automação e otimização que elevam a eficiência 
+          operacional, reduzindo custos e aumentando a produtividade através de 
+          processos inteligentes e sustentáveis.
         </p>
         <ul style="text-align: left; margin-top: 1.5rem;">
           <li>Automação de relatórios</li>
@@ -65,8 +67,8 @@ permalink: /services/
         <div class="service-icon">🎯</div>
         <h3 class="service-title">Consultoria Estratégica</h3>
         <p class="service-description">
-          Oferecemos consultoria especializada para ajudar sua empresa a desenvolver 
-          uma cultura orientada a dados e implementar estratégias de crescimento.
+          Desenvolvemos estratégias de transformação digital e cultura orientada a dados, 
+          alinhadas com os objetivos organizacionais e contexto competitivo do mercado.
         </p>
         <ul style="text-align: left; margin-top: 1.5rem;">
           <li>Estratégia de dados</li>
@@ -78,10 +80,11 @@ permalink: /services/
       
       <div class="service-card">
         <div class="service-icon">🔍</div>
-        <h3 class="service-title">Modelagem Preditiva</h3>
+        <h3 class="service-title">Analytics Preditivo</h3>
         <p class="service-description">
-          Desenvolvemos modelos preditivos que ajudam a antecipar tendências e 
-          comportamentos, permitindo decisões proativas e estratégicas.
+          Desenvolvemos modelos preditivos avançados que antecipam tendências e 
+          comportamentos, habilitando decisões estratégicas proativas e 
+          vantagem competitiva sustentável.
         </p>
         <ul style="text-align: left; margin-top: 1.5rem;">
           <li>Previsão de demanda</li>
@@ -156,7 +159,7 @@ permalink: /services/
     </p>
     <div class="cta-buttons">
       <a href="mailto:contato@axiumanalytics.com" class="btn btn-secondary">Solicitar Consulta</a>
-      <a href="/about/" class="btn" style="background: white; color: #667eea; border: 2px solid white;">Conheça Nossa Equipe</a>
+      <a href="/axium-analytics/about/" class="btn" style="background: white; color: #667eea; border: 2px solid white;">Conheça Nossa Equipe</a>
     </div>
   </div>
 </section>

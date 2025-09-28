@@ -11,6 +11,8 @@
   }
   
   .hero {
+    min-height: 80vh;
+    
     .hero-title {
       font-size: $font-size-3xl;
     }
@@ -28,11 +30,41 @@
         max-width: 300px;
       }
     }
+    
+    // Esconder elementos geométricos em mobile
+    &::after {
+      display: none;
+    }
+  }
+  
+  // Ajustar elementos geométricos para mobile
+  .geometric-shape {
+    display: none;
   }
   
   .services-grid {
     grid-template-columns: 1fr;
     gap: $spacing-6;
+  }
+  
+  .service-card {
+    padding: $spacing-6;
+    
+    .service-icon {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .cta-section {
+    padding: $spacing-12 0;
+    
+    .cta-title {
+      font-size: $font-size-2xl;
+    }
+    
+    .cta-subtitle {
+      font-size: $font-size-base;
+    }
   }
   
   .stats-grid {

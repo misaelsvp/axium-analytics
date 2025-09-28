@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 100) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links with custom easing
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -42,14 +42,37 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 70; // Account for fixed navbar
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+                const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
+                
+                // Custom smooth scroll with easing
+                smoothScrollTo(offsetTop, 800);
             }
         });
     });
+    
+    // Custom smooth scroll function with easing
+    function smoothScrollTo(target, duration) {
+        const start = window.pageYOffset;
+        const distance = target - start;
+        let startTime = null;
+        
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            
+            // Easing function (ease-out-cubic)
+            const ease = 1 - Math.pow(1 - progress, 3);
+            
+            window.scrollTo(0, start + distance * ease);
+            
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+        
+        requestAnimationFrame(animation);
+    }
     
     // Intersection Observer for animations
     const observerOptions = {
@@ -146,14 +169,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     
-    // Parallax effect for hero section
+    // Parallax effect for hero section with throttling
     const hero = document.querySelector('.hero');
     if (hero) {
-        window.addEventListener('scroll', function() {
+        const throttledParallax = throttle(function() {
             const scrolled = window.pageYOffset;
-            const parallax = scrolled * 0.5;
+            const parallax = scrolled * 0.3; // Reduced for smoother effect
             hero.style.transform = `translateY(${parallax}px)`;
-        });
+        }, 16); // ~60fps
+        
+        window.addEventListener('scroll', throttledParallax);
     }
     
     // Lazy loading for images
