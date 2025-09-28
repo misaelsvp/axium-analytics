@@ -304,7 +304,6 @@
       gap: $spacing-4;
       justify-content: center;
       flex-wrap: wrap;
-      animation: fadeInUp 2.1s ease-out 0.9s both;
       
       @media (max-width: $breakpoint-md) {
         flex-direction: column;
