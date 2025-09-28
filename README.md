@@ -40,7 +40,7 @@ O site é automaticamente deployado no GitHub Pages quando há push na branch `m
 ## Contato
 
 - **E-mail**: contato@axiumanalytics.com
-- **LinkedIn**: [linkedin.com/in/misaels](https://linkedin.com/in/misaels)
+- **LinkedIn**: [linkedin.com/company/axium-analytics](https://www.linkedin.com/company/axium-analytics)
 
 ---
 

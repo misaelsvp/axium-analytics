@@ -96,7 +96,7 @@ permalink: /contact/
             <div>
               <h4 style="margin-bottom: 0.25rem;">LinkedIn</h4>
               <p style="margin: 0; color: #64748b;">
-                <a href="https://linkedin.com/in/misaels" target="_blank" style="color: #667eea;">linkedin.com/in/misaels</a>
+                <a href="https://www.linkedin.com/company/axium-analytics" target="_blank" style="color: #667eea;">linkedin.com/company/axium-analytics</a>
               </p>
             </div>
           </div>
@@ -157,7 +157,7 @@ permalink: /contact/
     </p>
     <div class="cta-buttons">
       <a href="mailto:contato@axiumanalytics.com" class="btn btn-secondary">Enviar E-mail</a>
-      <a href="https://linkedin.com/in/misaels" target="_blank" class="btn" style="background: white; color: #667eea; border: 2px solid white;">Conectar no LinkedIn</a>
+      <a href="https://www.linkedin.com/company/axium-analytics" target="_blank" class="btn" style="background: white; color: #667eea; border: 2px solid white;">Conectar no LinkedIn</a>
     </div>
   </div>
 </section>
